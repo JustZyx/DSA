@@ -1,0 +1,7 @@
+*.sdf
+Debug/
+*.sln
+*.opensdf
+*.vs/
+DSA/*.vcxproj
+DSA/*vcxproj.filters
