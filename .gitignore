@@ -5,4 +5,5 @@ Debug/
 DSA/*vcxproj.filters
 *.VC.db
 *.VC.VC.opendb
+*.VC.opendb
 
