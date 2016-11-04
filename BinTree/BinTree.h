@@ -1,10 +1,9 @@
 #pragma once
 
-#include "BinNode.cpp"	//引入二叉树节点类
+#include "BinNode.h"	//引入二叉树节点类
 #include <iostream>
-#include <cstdlib>
 
-template<typename T>
+template <typename T>
 class BinTree
 {
 protected:
@@ -13,11 +12,6 @@ protected:
 
 public:
 	BinTree() : _size(0), _root(nullptr) {};
-	/*~BinTree() {
-		if (_size > 0) {
-			remove(_root);
-		}
-	}*/
 
 	int size() const { return _size; }
 	bool empty() const { return !_root; }
@@ -27,8 +21,11 @@ public:
 	BinNodePosi(T) insertAsRoot(T const& e);
 	BinNodePosi(T) insertAsLC(BinNodePosi(T) x, T const& e);
 	BinNodePosi(T) insertAsRC(BinNodePosi(T) x, T const& e);
-
-	void travIn(BinNodePosi(T) x); //中序遍历
-	void createTree(BinTree<T>& bt, BinNodePosi(T) x); //创建树
+	
+	void travLevel() { if (_root) _root->travLevel(); }	//层序遍历
+	void travPre() { if (_root) _root->travPre(); } //先序遍历
+	void travIn() { if (_root) _root->travIn(); } //中序遍历
+	void travPost() { if (_root) _root->travPost(); } //后序遍历
 };
 
+#include "BinTreeImp.h"

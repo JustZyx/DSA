@@ -1,7 +1,5 @@
 #pragma once
 
-#include "BinTree.h"
-
 template <typename T>
 BinNodePosi(T) BinTree<T>::insertAsRoot(T const& e)
 {
@@ -25,15 +23,3 @@ BinNodePosi(T) BinTree<T>::insertAsRC(BinNodePosi(T) x, T const& e)
 	return x->rc;
 }
 
-template <typename T>
-void BinTree<T>::travIn(BinNodePosi(T) x)
-{
-	if (!x) {
-		std::cout << "#" << "=>";
-	}
-	else {
-		std::cout << x->data << "=>";
-		travIn(x->lc);
-		travIn(x->rc);
-	}
-}

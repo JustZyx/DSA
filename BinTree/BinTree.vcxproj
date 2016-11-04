@@ -147,11 +147,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BinNode.h" />
+    <ClInclude Include="BinNodeImp.h" />
     <ClInclude Include="BinTree.h" />
+    <ClInclude Include="BinTreeImp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinNode.cpp" />
-    <ClCompile Include="BinTree.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

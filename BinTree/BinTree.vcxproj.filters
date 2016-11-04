@@ -15,20 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="BinNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="BinTree.h">
+    <ClInclude Include="BinNodeImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BinTreeImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinTree.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BinNode.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
