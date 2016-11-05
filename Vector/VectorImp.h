@@ -3,7 +3,7 @@
 template <typename T> void Vector<T>::copyFrom(T const* A, int lo, int hi)
 {
 	_size = 0;
-	_elem = new T(_capacity = hi - lo + 10);
+	_elem = new T[_capacity = hi - lo + 10];
 	for (int i = lo; i != hi; ++i) {
 		_elem[i] = A[i];
 		++_size;
