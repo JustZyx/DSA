@@ -60,7 +60,58 @@ template <typename T> int Vector<T>::size()
 	return _size;
 }
 
+template <typename T> int Vector<T>::capacity()
+{
+	return _capacity;
+}
+
 template <typename T> bool Vector<T>::empty()
 {
 	return _size > 0 ? true : false;
+}
+
+template <typename T> int Vector<T>::find(T const& e, int lo, int hi)
+{
+	for (int i = lo; i != hi; ++i) {
+		if (_elem[i] == e)
+			return i;
+	}
+
+	std::cout << "没有找到" << e << std::endl;
+	return -1;
+}
+ 
+template <typename T> T Vector<T>::remove(int posi)
+{
+	if (posi < 0 || posi >= _size) {
+		std::cout << "下标不合法";
+		return -1;
+	}
+
+	T tmp = _elem[posi];
+	for (int i = posi; i != _size - 1; ++i) {
+		_elem[i] = _elem[i + 1];
+	}
+	--_size;
+	return tmp;
+}
+
+
+template <typename T> T& Vector<T>::operator[] (int posi)
+{
+	if (posi < 0 || posi >= _size) {
+		std::cout << "下标不合法";
+		return;
+	}
+
+	return _elem[posi];
+}
+
+template <typename T> Vector<T>& Vector<T>::operator= (Vector<T> const& V)
+{
+	if (_elem)
+		delete[] _elem;
+
+	copyFrom(V._elem, 0, V._size);
+	return *this;
 }

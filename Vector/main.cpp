@@ -5,7 +5,7 @@ int main()
 	Vector<int> vec;
 
 	std::cout << "vec的容量为: ";
-	std::cout << vec._capacity << std::endl;
+	std::cout << vec.capacity() << std::endl;
 	std::cout << "vec的规模为: ";
 	std::cout << vec.size() << std::endl;
 
@@ -17,6 +17,14 @@ int main()
 	std::cout << "vec的规模为: ";
 	std::cout << vec.size() << std::endl;
 	std::cout << "vec的容量为: ";
-	std::cout << vec._capacity << std::endl;
+	std::cout << vec.capacity() << std::endl;
+
+	vec.remove(2);
+	
+	std::cout << "vec的规模为: ";
+	std::cout << vec.size() << std::endl;
+	std::cout << "vec的容量为: ";
+	std::cout << vec.capacity() << std::endl;
+	
 	vec.traverse();
 }
