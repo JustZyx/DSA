@@ -3,6 +3,7 @@ Debug/
 *.opensdf
 *.vs/
 DSA/*vcxproj.filters
+Vector/*vcxproj.filters
 *.VC.db
 *.VC.VC.opendb
 *.VC.opendb
