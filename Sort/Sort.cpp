@@ -4,6 +4,15 @@
 
 #include "Sort.h"
 
+//选择排序
+void Sort::_selectSort()
+{
+    for (int i = _left; i <= _right; ++i) {
+        int _min = _scanForMin(i, _right);
+        _swap(Arr[i], Arr[_min]);
+    }
+}
+
 //冒泡排序
 void Sort::_bubbleSort()
 {
@@ -47,6 +56,24 @@ void Sort::_shellSort()
             Arr[j] = _onHand;
         }
     }
+}
+
+//return _index
+int Sort::_scanForMin(int a, int b)
+{
+    if (a > b) {
+        return false;
+    }
+
+    int _min = Arr[a];
+    int _index = a;
+    for (int i = a + 1; i <= b; ++i) {
+        if (Arr[i] < _min) {
+            _min = Arr[i];
+            _index = i;
+        }
+    }
+    return _index;
 }
 
 //打印数组

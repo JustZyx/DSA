@@ -12,9 +12,11 @@ class Sort
 {
 public:
     Sort(int *A, int _left, int _right) : Arr(A), _left(_left), _right(_right) {}
+    void _selectSort(); //选择排序
     void _bubbleSort();  //冒泡排序
     void _insertSort();  //插入排序
     void _shellSort();   //希尔排序
+    int _scanForMin(int a, int b);
     void var_dump();    //输出数组
 protected:
     void _swap(int &a, int &b)

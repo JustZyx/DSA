@@ -11,9 +11,16 @@ int main()
     std::cout << "排序前：" << std::endl;
     s.var_dump();
 
-    std::cout << "冒泡排序后：" << std::endl;
-    s._bubbleSort();
+//    std::cout << "冒泡排序后：" << std::endl;
+//    s._bubbleSort();
+//    s.var_dump();
+
+    std::cout << "选择排序后：" << std::endl;
+    s._selectSort();
     s.var_dump();
+
+    std::cout << "下标2到5中最小值为：";
+    std::cout << s._scanForMin(0, 1) << std::endl;
 
 //    std::cout << "插入排序后：" << std::endl;
 //    s._insertSort();
